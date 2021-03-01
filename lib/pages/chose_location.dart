@@ -34,8 +34,11 @@ class _ChooseLocationState extends State<ChooseLocation> {
         itemBuilder: (context, index) {
           return Card(
             child: ListTile(
-                onTap: () {},
-                title: Text(locations[index].location)
+              onTap: () {},
+              title: Text(locations[index].location),
+              leading: CircleAvatar(
+                backgroundImage: AssetImage('images/${locations[index].flag}'),
+              ),
             ),
           );
         },
