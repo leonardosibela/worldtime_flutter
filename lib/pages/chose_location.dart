@@ -32,12 +32,15 @@ class _ChooseLocationState extends State<ChooseLocation> {
       body: ListView.builder(
         itemCount: locations.length,
         itemBuilder: (context, index) {
-          return Card(
-            child: ListTile(
-              onTap: () {},
-              title: Text(locations[index].location),
-              leading: CircleAvatar(
-                backgroundImage: AssetImage('images/${locations[index].flag}'),
+          return Padding(
+            padding: const EdgeInsets.symmetric(vertical: 1.0, horizontal: 4.0),
+            child: Card(
+              child: ListTile(
+                onTap: () {},
+                title: Text(locations[index].location),
+                leading: CircleAvatar(
+                  backgroundImage: AssetImage('images/${locations[index].flag}'),
+                ),
               ),
             ),
           );
